@@ -1,5 +1,9 @@
 #ifndef __RINGBUFFER_H__
 #define __RINGBUFFER_H__
+/**
+ * Copyright (c) 2014, Zhiyong Liu <Neesenk at gmail dot com>
+ * All rights reserved.
+ */
 
 #ifdef __cplusplus
 extern "C" {

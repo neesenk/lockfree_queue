@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2014, Zhiyong Liu <Neesenk at gmail dot com>
+ * All rights reserved.
+ */
 #include <assert.h>
 #include <stdlib.h>
 
