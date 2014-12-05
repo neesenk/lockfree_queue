@@ -82,7 +82,7 @@ struct mqueue *mqueue_create(size_t nmemb, size_t size)
     struct mqueue *q = 0;
 
     size = ((size + sizeof(struct item) + 7) / 8) * 8; // 8字节对齐
-    q = calloc(1, sizeof(*q) + size * nmemb);
+    q = (struct mqueue*)calloc(1, sizeof(*q) + size * nmemb);
 
     if (q == NULL)
         return NULL;
@@ -121,7 +121,7 @@ struct mqueuebatch *mqueuebatch_create(size_t nmemb, size_t size)
 {
     size_t i = 0;
     size_t qnum = get_cpunum();
-    struct mqueuebatch *qs = calloc(1, sizeof(*qs) + sizeof(struct mqueue *) * qnum);
+    struct mqueuebatch *qs = (struct mqueuebatch*)calloc(1, sizeof(*qs) + sizeof(struct mqueue *) * qnum);
     if (qs == NULL)
         return NULL;
 
